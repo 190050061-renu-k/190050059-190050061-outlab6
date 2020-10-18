@@ -1,0 +1,30 @@
+import { Component, OnInit } from '@angular/core';
+import { FormService } from '../form.service';
+import { FormBuilder, FormGroup } from '@angular/forms'
+import { Form } from '../form'
+@Component({
+  selector: 'app-form',
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.scss']
+})
+export class FormComponent implements OnInit {
+  form: FormGroup;
+
+  constructor(private fb: FormBuilder,public formService: FormService){}
+
+  submit(){
+	this.formService.postFormDetails(this.form.value).subscribe(data=>{
+	this.form=this.fb.group({
+		name:"",
+		email:"",
+		feedback:"",
+		comment:""
+	})
+	alert("Submitted the form succesfully!");
+});
+  }
+
+  ngOnInit(): void {
+  this.formService.getFormDetails().subscribe((data:Form)=>{this.form=this.fb.group(data);});}
+
+}

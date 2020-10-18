@@ -1,0 +1,5 @@
+<ul>
+  <li>Name:{{contact.name}}</li>
+  <li>Email:{{contact.email}}</li>
+  <li>Roll:{{contact.roll}}</li>
+</ul>

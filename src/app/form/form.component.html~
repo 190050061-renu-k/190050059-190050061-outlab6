@@ -1,0 +1,18 @@
+<form *ngIf="form" [formGroup]="form">
+  Name:
+  <mat-form-field><input matInput placeholder="name" formControlName="name"></mat-form-field><br>
+  Email:
+<mat-form-field><input matInput placeholder="email" formControlName="email"></mat-form-field><br>
+Feedback:<input type="radio" value="Great" formControlName="feedback">Great
+<input type="radio" value="Okay" formControlName="feedback">Okay
+<input type="radio" value="Not good" formControlName="feedback">Not good<br>
+Comments:<mat-form-field><textarea matInput placeholder="comments" formControlName="comment"></textarea></mat-form-field><br>
+<button (click)="submit()">Submit</button><br>
+
+<ul>
+  <li>Name:{{form.value.name}}</li>
+  <li>Email:{{form.value.email}}</li>
+  <li>Feedback:{{form.value.feedback}}</li>
+  <li>Comments:{{form.value.comment}}</li>
+</ul>
+</form>

@@ -1,0 +1,6 @@
+<mat-toolbar color='accent'><span>Form Application</span>
+  <div>
+    <a href='/contact'>Contact</a>
+    <a href='/form'>Form</a>
+  </div>
+</mat-toolbar>

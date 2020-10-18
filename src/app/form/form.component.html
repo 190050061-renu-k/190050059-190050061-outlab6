@@ -1,0 +1,17 @@
+<form *ngIf="form" [formGroup]="form" #formDir="ngForm">
+  Name: <mat-form-field><input class="text" placeholder="name" formControlName="name" ></mat-form-field><br>
+  Email: <mat-form-field><input class="text" placeholder="email" formControlName="email" ></mat-form-field><br>
+  Feedback:
+  <input type="radio" value="Great" formControlName="feedback" >Great
+  <input type="radio" value="Okay" formControlName="feedback" >Okay
+  <input type="radio" value="Not good" formControlName="feedback" >Not good <br>
+  Comments:
+  <mat-form-field><input class="textarea" matInput placeholder="comments" formControlName="comment" ></mat-form-field><br>
+  <button (click)="submit()">Submit</button><br>
+</form>
+<br>
+<h1>Form Details</h1>
+Name:{{model["name"]}}<br>
+Email: {{model["email"]}}<br>
+Feedback: {{model["feedback"]}}<br>
+Comments: {{model["comment"]}}<br>

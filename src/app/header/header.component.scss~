@@ -1,0 +1,9 @@
+mat-toolbar,a,span{
+    padding:2px;
+}
+a{
+    color:white;
+    text-decoration:none;
+    heigth:100%;
+    background:green;
+}
